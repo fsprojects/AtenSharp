@@ -2,7 +2,7 @@
 AtenSharp
 ==========
 
-AtenSharp is a .NET library that provides access to the underlying tenosr library that powers
+AtenSharp is a .NET library that provides access to the underlying tensor library that powers
 PyTorch.   This was originally part of TorchSharp but has been factored out and is no longer maintained.
 
 [![Project Status: Suspended – Initial development has started, but there has not yet been a stable, usable release; work has been stopped for the time being but the author(s) intend on resuming work.](https://www.repostatus.org/badges/latest/suspended.svg)](https://www.repostatus.org/#suspended)
