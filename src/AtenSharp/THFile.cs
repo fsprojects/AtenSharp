@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 using System.Text;
 
-namespace Torch.IO
+namespace AtenSharp.IO
 {
     /// <summary>
-    ///   Abstract base class for all Torch files.
+    ///   Abstract base class for all Aten files.
     /// </summary>
     public abstract partial class File : IDisposable
     {

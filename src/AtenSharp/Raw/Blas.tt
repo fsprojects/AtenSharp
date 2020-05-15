@@ -11,7 +11,7 @@ namespace AtenSharp.Raw {
     // High-performance vector anad matrix operations.
     internal static class Blas {
 <#
-foreach (var type in TorchTypeDef.Types) {
+foreach (var type in AtenTypeDef.Types) {
 #>
 
         // *** Level 1

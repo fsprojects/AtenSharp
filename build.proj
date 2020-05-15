@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Project Include="TorchSharp.sln" />
+    <Project Include="AtenSharp.sln" />
   </ItemGroup>
 
   <Import Project="dir.traversal.targets" />
@@ -32,8 +32,6 @@
     <TraversalBuildDependsOn>
       CreateOrUpdateCurrentVersionFile;
       RestoreProjects;
-      BuildRedist;
-      BuildNative;
       $(TraversalBuildDependsOn);
       DownloadExternalTestFiles;
     </TraversalBuildDependsOn>
@@ -46,28 +44,12 @@
              Properties="MSBuildWarningsAsMessages=NU1503" />
   </Target>
 
-  <Target Name="BuildRedist"
-          Condition="'$(SkipRedistBuild)' != 'true'"
-          DependsOnTargets="RestoreProjects">
-    <Message Importance="High" Text="Building redist components..." />
-    <MSBuild Projects="src/Redist/build.proj"
-             Targets="Build" />
-  </Target>
-
-  <Target Name="BuildNative"
-          Condition="'$(SkipNativeBuild)' != 'true'"
-          DependsOnTargets="RestoreProjects;BuildRedist">
-    <Message Importance="High" Text="Building native components..." />
-    <MSBuild Projects="src/Native/build.proj"
-             Targets="Build" />
-  </Target>
-
   <Target Name="BuildPackages"
           DependsOnTargets="CreateOrUpdateCurrentVersionFile;RestoreProjects">
     <Message Importance="High" Text="Building packages ..." />
 
     <ItemGroup>
-      <PkgProject Include="pkg\**\*.nupkgproj" />
+      <PkgProject Include="src\**\*.csproj" />
     </ItemGroup>
 
     <MSBuild Projects="@(PkgProject)"

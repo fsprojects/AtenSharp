@@ -11,7 +11,7 @@ namespace AtenSharp.Raw {
     // High-performance linear algebra operations.
     internal static class Lapack {
 <#
-foreach (var type in TorchTypeDef.Types) {
+foreach (var type in AtenTypeDef.Types) {
 
     string tIntPtr  = "IntPtr /* int* */";
 #>

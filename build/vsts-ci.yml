@@ -1,5 +1,5 @@
 ################################################################################
-# TorchSharp's official, signed build 
+# AtenSharp's official, signed build 
 ################################################################################
 
 resources:
@@ -182,7 +182,7 @@ phases:
     _SignType: real
     _UseEsrpSigning: true
     _TeamName: DotNetCore
-    _NuGetFeedUrl: https://www.myget.org/F/torchsharp-myget-feed/api/v2
+    _NuGetFeedUrl: https://www.myget.org/F/AtenSharp-myget-feed/api/v2
   queue:
     name: DotNetCore-Build
     demands: 
@@ -244,7 +244,7 @@ phases:
   #      command: push 
   #      packagesToPush: $(Build.SourcesDirectory)/bin/packages/**/*.nupkg;!$(Build.SourcesDirectory)/bin/packages/**/*.symbols.nupkg 
   #      nuGetFeedType: internal 
-  #      feedPublish: TorchSharp-DevOps # TODO: Needs setting up.
+  #      feedPublish: AtenSharp-DevOps # TODO: Needs setting up.
 
   # TODO: Deal with symbols.
   

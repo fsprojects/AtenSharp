@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 using System.Text;
 
-namespace Torch.IO
+namespace AtenSharp.IO
 {
     /// <summary>
     /// Bindings for the native THMemoryFile APIs

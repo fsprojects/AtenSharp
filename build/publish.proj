@@ -31,7 +31,7 @@
       </IgnorableErrorMessages>
     </ItemGroup>
     
-    <Message Text="Pushing TorchSharp packages to $(NuGetFeedUrl)" />
+    <Message Text="Pushing AtenSharp packages to $(NuGetFeedUrl)" />
     
     <PropertyGroup>
       <DotnetToolCommand>$(ToolsDir)dotnetcli/dotnet</DotnetToolCommand>

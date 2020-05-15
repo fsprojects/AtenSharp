@@ -1,14 +1,12 @@
-[![Build Status](https://migueldeicaza.visualstudio.com/TorchSharp/_apis/build/status/TorchSharp-CI)](https://migueldeicaza.visualstudio.com/TorchSharp/_build/latest?definitionId=5)
+latest?definitionId=5)
 
-TorchSharp
+AtenSharp
 ==========
 
-TorchSharp is a .NET library that provides access to the library that powers
-PyTorch.  It is a work in progress, but already provides a .NET API that can
-be used to perform (1) various operations on ATen Tensors; (2) scoring of 
-TorchScript models; (3) Training of simple neural networks.
+AtenSharp is a .NET library that provides access to the underlying tenosr library that powers
+PyTorch.  
 
-Our current focus is to bind the entire API surfaced by libtorch.
+This was originally part of AtenSharp but has been factored out and is no longer maintained.
 
 Things that you can try:
 
@@ -22,11 +20,6 @@ FloatTensor.Add (x, 23, result);
 
 Console.WriteLine (x [12]);
 ```
-
-Discussions
-===========
-
-We have a chat room on Gitter [![Gitter](https://badges.gitter.im/xamarin/TorchSharp.svg)](https://gitter.im/xamarin/TorchSharp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Building
 ============
@@ -73,7 +66,7 @@ Commands:
 
 Updating package version for new release
 -----------------------------
-To change the package version update this [file](https://github.com/xamarin/TorchSharp/blob/master/build/BranchInfo.props).
+To change the package version update this [file](https://github.com/xamarin/AtenSharp/blob/master/build/BranchInfo.props).
 Everything is currently considered in preview.
 
 Use the following two MSBuild arguments in order to control the -preview and the build numbers in the name of the nuget packages produced (use one of the two generally):
@@ -91,4 +84,4 @@ For GPU support it is required to install CUDA 9.0 and make it available to the 
 
 Examples
 ===========
-Porting of the more famous network architectures to TorchSharp is in progress. For the moment we only support [MNIST](https://github.com/xamarin/TorchSharp/blob/master/src/Examples/MNIST.cs) and [AlexNet](https://github.com/xamarin/TorchSharp/blob/master/src/Examples/AlexNet.cs)
+Porting of the more famous network architectures to AtenSharp is in progress. For the moment we only support [MNIST](https://github.com/xamarin/AtenSharp/blob/master/src/Examples/MNIST.cs) and [AlexNet](https://github.com/xamarin/AtenSharp/blob/master/src/Examples/AlexNet.cs)

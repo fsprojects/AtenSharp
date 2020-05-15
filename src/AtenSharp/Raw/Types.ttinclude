@@ -1,5 +1,5 @@
 ﻿<#+
-    public class TorchTypeDef {
+    public class AtenTypeDef {
 
         public readonly string Name;
         public readonly string Storage;
@@ -8,7 +8,7 @@
         public readonly bool IsSignedInt;
         public readonly bool IsFloat;
 
-        private TorchTypeDef(string name, string storage) {
+        private AtenTypeDef(string name, string storage) {
             this.Name = name;
             this.Storage = storage;
 
@@ -16,13 +16,13 @@
             this.IsFloat = name == "Float" || name == "Double";
         }
 
-        public static readonly TorchTypeDef[] Types = {
-            new TorchTypeDef("Byte",   "byte"),
-            new TorchTypeDef("Short",  "short"),
-            new TorchTypeDef("Int",    "int"),
-            new TorchTypeDef("Long",   "long"),
-            new TorchTypeDef("Float",  "float"),
-            new TorchTypeDef("Double", "double"),
+        public static readonly AtenTypeDef[] Types = {
+            new AtenTypeDef("Byte",   "byte"),
+            new AtenTypeDef("Short",  "short"),
+            new AtenTypeDef("Int",    "int"),
+            new AtenTypeDef("Long",   "long"),
+            new AtenTypeDef("Float",  "float"),
+            new AtenTypeDef("Double", "double"),
         };
 
         public readonly string Ptr = "IntPtr /* scalar_t* */"; // "HType";

@@ -1,5 +1,5 @@
 //
-// Internal bindings to support the NN bindings of Torch
+// Internal bindings to support the NN bindings of Aten
 //
 //
 

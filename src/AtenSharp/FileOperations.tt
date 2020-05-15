@@ -11,7 +11,7 @@ using System;
 using System.Runtime.InteropServices;
 using AtenSharp;
 
-namespace Torch.IO
+namespace AtenSharp.IO
 {
 
     public abstract partial class File : IDisposable
